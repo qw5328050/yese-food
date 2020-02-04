@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 左侧菜单 -->
+  <view class="left-side">
+    <view class="list active">水煮三国</view>
+    <view class="list">快手小炒</view>
+    <view class="list">麻辣江湖</view>
+    <view class="list">粮草先行</view>
+    <view class="list">主食</view>
+    <view class="list">酒水饮料</view>
+  </view>
+
+  <view class="main">1</view>
+
+
+</view>
