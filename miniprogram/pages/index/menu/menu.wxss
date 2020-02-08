@@ -1,0 +1,89 @@
+
+.left-side {
+  width: 200rpx;
+  position: absolute;
+  background: #f5f5f5;
+  color: #727271;
+  bottom: 0;
+  top: 350rpx;
+}
+.main {
+  width: calc(100% - 200rpx);
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  top: 350rpx;
+  left: 200rpx;
+}
+.left-side .list {
+  text-align: center;
+  padding: 25rpx 20rpx;
+}
+.left-side .list.active {
+  color: #3c3c3c;
+  background: #fff;
+}
+.food-menu {
+  height: 220rpx;
+  padding: 20rpx 30rpx;
+}
+.food-menu .food-img{
+  width: 200rpx;
+  height: 200rpx;
+  float: left
+}
+.food-menu .food-img image {
+  width: 100%;
+  height: 100%;
+}
+.food-menu .food-info {
+  width: calc(100% - 220rpx);
+  height: 100%;
+  float: right;
+  position: relative;
+}
+.food-menu .food-details {
+  font-size: 25rpx;
+  height: 50rpx;
+  display: block;  
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+  padding: 28rpx 0;
+}
+.food-menu .food-price{
+  width: 50%;
+  font-size: 25rpx;
+  float: left;
+}
+.food-menu .food-price .price, .food-menu .food-price .mark {
+  color: #fb4e44
+}
+.food-menu .food-price .price {
+  font-size: 33rpx
+}
+food-menu .food-price .persons{
+  color: #999;
+}
+.food-menu .operation {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 5rpx 15rpx;
+    bottom: 15rpx;
+    min-height: 25rpx;
+    font-size: 25rpx;
+}
+.food-menu .operation.add {
+  width: 80rpx;
+  font-size: 50rpx;
+  color: #2e2f3b;
+  background: #fff
+}
+.food-menu .operation.addselect {
+  width: 120rpx;
+  border-radius: 20rpx; 
+  background: #2e2f3b;
+  color: #fff;
+  bottom: 25rpx;
+}

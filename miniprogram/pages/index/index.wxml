@@ -1,35 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="top">
-    <view class="top-logo">
-      <image src="../../images/logo.jpg"></image>
-    </view>
-    <view class="top-info">
-      <view class="top-title">夜色</view>
-      <text>夜色不负美食，最美的夜色给最美的你，祝愿大家用餐愉快</text>
-    </view>
-  </view>
+  <head bind:navEmit="navEmit"></head>
   <!-- 左侧菜单 -->
-  <view class="left-side">
-    <view class="list {{item.isSelect ? 'active' : '' }}" bindtap="onClickItem" data-code="{{item.code}}" wx:for="{{itemList}}" wx:key="code">{{item.name}}</view>
-  </view>
-
-  <scroll-view class="main">
-    <view class="food-menu">
-      <view class="food-img">
-        <image src="../../images/szsg.webp"></image>
-      </view>
-      <view class="food-info">
-        <text class="food-title">水煮三国</text>
-        <text class="food-details">食材：食材；牛肉、鸭胗、午餐肉、毛肚、鸡爪、鸭肠、肥肠、田鸡、虾、龙利鱼、花蛤、淡菜、老蛏、鱿鱼</text>
-        <view class="food-price">
-          <text class="mark">￥</text>
-          <text class="price">68</text>
-          <text class="persons">/3人份</text>
-        </view>
-        <!-- <button class="operation addselect" bindtap="onAddselect">选规格</button> -->
-        <button class="operation add"></button>
-      </view>
-    </view> 
-  </scroll-view> 
+  <menu wx:if="{{navCurrent === 'menu'}}"></menu>
+  <add-menu wx:if="{{navCurrent === 'addMenu'}}"></add-menu>
 </view>

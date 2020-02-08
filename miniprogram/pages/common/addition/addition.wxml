@@ -1,0 +1,5 @@
+<view class="addition">
+  <text class="iconfont iconicon-test"></text>
+  <text>{{number}}</text>
+  <text class="iconfont iconjiahao1"></text>
+</view>

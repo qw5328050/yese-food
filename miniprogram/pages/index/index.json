@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "head": "head/head",
+    "menu": "menu/menu",
+    "add-menu": "addMenu/addMenu"
+  }
 }
