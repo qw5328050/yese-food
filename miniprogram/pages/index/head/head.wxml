@@ -8,7 +8,4 @@
       <text>夜色不负美食，最美的夜色给最美的你，祝愿大家用餐愉快</text>
     </view>
   </view>
-  <view class="nav-active">
-    <view class="nav-item {{current === item.code ? 'cur' : ''}}" bindtap="onClickCur" data-code="{{item.code}}" wx:for="{{navList}}" wx:if="{{item.isAdmin}}" wx:key="code">{{item.name}}</view>
-  </view>
 </view>

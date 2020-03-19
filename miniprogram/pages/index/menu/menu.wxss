@@ -23,6 +23,12 @@
   color: #3c3c3c;
   background: #fff;
 }
+
+.food-list .food-title {
+  color: #727271;
+  font-size: 35rpx;
+  padding: 10rpx 30rpx;
+}
 .food-menu {
   height: 220rpx;
   padding: 20rpx 30rpx;

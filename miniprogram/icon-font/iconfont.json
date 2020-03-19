@@ -6,6 +6,34 @@
   "description": "夜色外卖",
   "glyphs": [
     {
+      "icon_id": "4551253",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "1393604",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
+      "icon_id": "10050450",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "11342896",
+      "name": "添加关注",
+      "font_class": "tianjia",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
       "icon_id": "350330",
       "name": "折扣券",
       "font_class": "zhekouquan",
@@ -55,13 +83,6 @@
       "unicode_decimal": 58934
     },
     {
-      "icon_id": "6275357",
-      "name": "减号",
-      "font_class": "icon-test",
-      "unicode": "e61a",
-      "unicode_decimal": 58906
-    },
-    {
       "icon_id": "9297180",
       "name": "折扣",
       "font_class": "zhekou",
@@ -74,20 +95,6 @@
       "font_class": "dizhi",
       "unicode": "e672",
       "unicode_decimal": 58994
-    },
-    {
-      "icon_id": "10050450",
-      "name": "搜索",
-      "font_class": "sousuo",
-      "unicode": "e621",
-      "unicode_decimal": 58913
-    },
-    {
-      "icon_id": "11342896",
-      "name": "添加关注",
-      "font_class": "tianjia",
-      "unicode": "e61d",
-      "unicode_decimal": 58909
     }
   ]
 }

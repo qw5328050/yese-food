@@ -1,8 +1,18 @@
+@import "../../../icon-font/iconfont.wxss";
 .container {
   width: 100%;
-  position: absolute;
-  background: #f5f5f5;
+  padding: 30rpx;
+  box-sizing: border-box
+}
+.container .nav-add {
+  font-size: 55rpx;
+}
+.container .nav-item {
+  width: 100%;
+  height: 120rpx;
+  margin-bottom: 20rpx;
   color: #727271;
-  bottom: 0;
-  top: 350rpx;
+  border: 1px solid #727271;
+  background: #f5f5f5;
+  box-sizing: border-box;
 }

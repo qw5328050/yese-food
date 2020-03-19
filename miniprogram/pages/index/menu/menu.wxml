@@ -1,24 +1,28 @@
   <view class="left-side">
-    <view class="list {{item.isSelect ? 'active' : '' }}" bindtap="onClickItem" data-code="{{item.code}}" wx:for="{{itemList}}" wx:key="code">{{item.name}}</view>
+    <view class="list {{navCur===item.code ? 'active' : '' }}" bindtap="onClickItem" data-code="{{item.code}}" wx:for="{{itemList}}" wx:key="code">{{item.title}}</view>
   </view>
 
   <scroll-view class="main">
-    <view class="food-menu">
-      <view class="food-img">
-        <image src="../../../images/szsg.webp"></image>
-      </view>
-      <view class="food-info">
-        <text class="food-title">水煮三国</text>
-        <text class="food-details">食材：食材；牛肉、鸭胗、午餐肉、毛肚、鸡爪、鸭肠、肥肠、田鸡、虾、龙利鱼、花蛤、淡菜、老蛏、鱿鱼</text>
-        <view class="food-price">
-          <text class="mark">￥</text>
-          <text class="price">68</text>
-          <text class="persons">/3人份</text>
+    <view class="food-list" wx:for="{{menuList}}" wx:key="requestID">
+      <view class="food-title">{{item.title}}</view>
+      <view class="food-menu" wx:for="{{item.list}}" wx:key="index">
+        <view class="food-img">
+          <image src="{{item.imageUrl}}"></image>
         </view>
-        <button class="operation addselect" bindtap="onAddselect">选规格</button>
-        <!-- <button class="operation add iconfont iconjiahao1"></button> -->
-      </view>
-    </view> 
+        <view class="food-info">
+          <text class="food-name">{{item.name}}</text>
+          <text class="food-details">{{item.details}}</text>
+          <view class="food-price">
+            <text class="mark">￥</text>
+            <text class="price">{{item.price}}</text>
+            <text class="persons">/{{item.part}}</text>
+          </view>
+          <button class="operation addselect" bindtap="onAddselect">选规格</button>
+          <!-- <button class="operation add iconfont iconjiahao1"></button> -->
+        </view>
+      </view> 
+    </view>
+    
   </scroll-view> 
   <mp-dialog show="{{dialogShow}}" class="menu-dialog">
       <view class="dialog-title">水煮三国</view>

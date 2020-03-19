@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <head bind:navEmit="navEmit"></head>
+  <head wx:if="{{navCurrent === 'index'}}"></head>
+  <nav-active bind:navEmit="navEmit"></nav-active>
   <!-- 左侧菜单 -->
-  <menu wx:if="{{navCurrent === 'menu'}}"></menu>
+  <menu wx:if="{{navCurrent === 'index'}}"></menu>
   <add-menu wx:if="{{navCurrent === 'addMenu'}}"></add-menu>
 </view>

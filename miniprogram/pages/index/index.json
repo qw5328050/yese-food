@@ -2,6 +2,7 @@
   "usingComponents": {
     "head": "head/head",
     "menu": "menu/menu",
-    "add-menu": "addMenu/addMenu"
+    "add-menu": "addMenu/addMenu",
+    "nav-active": "../common/navActive/navActive"
   }
 }

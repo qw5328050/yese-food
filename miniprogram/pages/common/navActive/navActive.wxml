@@ -1,0 +1,8 @@
+<view class="nav-active">
+  <view 
+  class="nav-item {{current === item.code ? 'cur' : ''}}" 
+  bindtap="onClickCur" data-code="{{item.code}}" 
+  wx:for="{{navList}}" 
+  wx:if="{{item.isAdmin}}" 
+  wx:key="code">{{item.name}}</view>
+</view>
