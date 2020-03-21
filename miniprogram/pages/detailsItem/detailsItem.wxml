@@ -1,0 +1,55 @@
+<view class="detail-item">
+  <nav-active isBack="{{true}}"></nav-active>
+  <view class="container">
+    <view class="detail-title">
+      <input value="{{dataList.title}}" bindchange="meunTitleChange" style="text-align: left;" class="weui-input" placeholder=""/>
+    </view>
+    <exhibitione
+      wx:for="{{dataList.list}}"
+      wx:key="index"
+      content="{{item}}"
+      bind:onModify="onModify">
+    </exhibitione>
+    <view class="add-exhibitione" bindtap="addDetails"> + </view>
+  </view>
+  <!-- 详情添加 -->
+  <mp-dialog title="添加菜单" wx:if="{{isCurr}}" show="{{isCurr}}" class="details-item-dialog" buttons="{{buttons}}" bindbuttontap="dialogButton">
+    <scroll-view>
+      <mp-form id="dialogData" rules="{{rules}}" models="{{formData}}">
+        <mp-cells>
+          <mp-cell prop="name" title="菜单名称" show-error>
+              <input value="{{formData.name}}" class="weui-input" placeholder=""/>
+          </mp-cell>
+          <mp-cell prop="price" title="价格" show-error>
+              <input value="{{formData.price}}" class="weui-input" placeholder=""/>
+          </mp-cell>
+          <mp-cell prop="part" title="份量">
+              <input value="{{formData.part}}" class="weui-input" placeholder=""/>
+          </mp-cell>
+          <mp-cell prop="details" title="菜单简介">
+              <textarea class="textarea" value="{{formData.details}}" placeholder=""></textarea>
+          </mp-cell>
+          <mp-cell prop="explain" title="菜单须知">
+              <textarea class="textarea" value="{{formData.explain}}" placeholder=""></textarea>
+          </mp-cell>
+        </mp-cells>
+      </mp-form>
+      <view class="editor-other">
+        <choose-specs 
+          name="规格" 
+          dataList="{{formData.specs}}" 
+          type="specs" 
+          isShow="{{formData.isSelect}}" 
+          bind:chooseChange="specsChange">
+        </choose-specs>
+        <choose-specs 
+          name="口味" 
+          dataList="{{formData.taste}}" 
+          type="taste" 
+          isShow="{{formData.isTaste}}" 
+          bind:chooseChange="tasteChange">
+        </choose-specs>
+      </view>
+    </scroll-view>
+  </mp-dialog>
+</view>

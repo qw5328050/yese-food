@@ -1,4 +1,4 @@
-@import "../../../icon-font/iconfont.wxss";
+@import "../../icon-font/iconfont.wxss";
 .container {
   width: 100%;
   padding: 30rpx;

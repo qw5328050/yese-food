@@ -1,7 +1,5 @@
 {
   "usingComponents": {
-    "head": "head/head",
-    "menu": "menu/menu",
     "nav-active": "../common/navActive/navActive"
   }
 }

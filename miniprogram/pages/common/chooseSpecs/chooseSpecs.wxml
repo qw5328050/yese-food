@@ -1,0 +1,19 @@
+<view class="choose-specs">
+  <view class="ml_20">
+    <label class="title">是否有{{name}}选择:</label>
+    <radio-group bindchange="selectChange">
+      <label wx:for="{{isSelectList}}" wx:key="index"><radio value="{{item.code}}" checked="{{item.checked}}"/>{{item.name}}</label>
+    </radio-group>
+  </view> 
+  <view class="ml_20" wx:if="{{isShow === 'true'}}">
+    <label class="title">编辑{{name}}:</label>
+    <view class="show-specs">
+      <text class="specs-item"  wx:for="{{dataList}}" wx:key="index" bindtap="closeSpecs" data-item="{{item}}">{{item.name}}</text>
+    </view>
+    <view class class="choose-editor">
+      <input bindchange="nameChange" value="{{chooseData.name}}" class="weui-input" placeholder="输入{{name}}"/>
+      <input bindchange="codeChange" value="{{chooseData.price}}" class="weui-input" placeholder="输入价格" wx:if="{{type === 'specs'}}"/>
+      <view class="btn" bindtap="specsAdd">添加</view>
+    </view>
+  </view>
+</view>

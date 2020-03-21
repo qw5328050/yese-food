@@ -1,0 +1,39 @@
+<view class="add-menu">
+  <nav-active current="addMenu"></nav-active>
+  <view class="container">
+    <!-- 菜单栏目列表 -->
+    <view class="nav-list">
+      <button
+        class="nav-item" 
+        wx:for="{{menuList}}" 
+        bindtap="showDetails" 
+        wx:key="index" 
+        data-details="{{item}}">{{item.title}}
+        </button>
+      <button class="nav-item nav-add iconfont iconplus-line" bindtap="onAddselect"></button>
+    </view>
+    <!-- 添加菜单栏目 -->
+    <mp-dialog show="{{dialogShow}}" class="nav-dialog" buttons="{{buttons}}" bindbuttontap="dialogButton">
+      <view class="nav-bottom">
+        <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+          <mp-cells title="添加菜单">
+            <mp-cell prop="navName" title="菜单栏目" show-error>
+                <input 
+                  bindchange="navNameChange" 
+                  style="text-align: left;" 
+                  class="weui-input" 
+                  placeholder=""/>
+            </mp-cell>
+            <mp-cell prop="navCode" title="菜单代码" show-error>
+                <input 
+                bindchange="navCodeChange" 
+                style="text-align: left;"
+                class="weui-input" 
+                placeholder=""/>
+            </mp-cell>
+          </mp-cells>
+        </mp-form>
+      </view>
+    </mp-dialog>
+  </view>
+</view>

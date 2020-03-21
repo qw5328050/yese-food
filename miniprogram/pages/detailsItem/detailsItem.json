@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-active": "../common/navActive/navActive",
+    "exhibitione": "../common/exhibitione/exhibitione",
+    "choose-specs": "../common/chooseSpecs/chooseSpecs"
+  }
+}

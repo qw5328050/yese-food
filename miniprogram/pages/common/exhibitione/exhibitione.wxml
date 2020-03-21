@@ -1,0 +1,16 @@
+<view class="exhibitione">
+  <view class="exhibitione-image">
+    <image src="{{content.imageUrl}}"></image>
+    <text></text>
+  </view>
+  <view class="exhibitione-details">
+    <view class="exhibitione-content">
+      <text>{{content.name}}</text>
+      <text>￥{{content.price}}</text>
+    </view>
+    <view class="exhibitione-operation">
+      <view class="exhibitione-btn exhibitione-remove" bindtap="onDelete">删除</view>
+      <view class="exhibitione-btn exhibitione-updata" bindtap="onModify">修改</view>
+    </view>
+  </view>
+</view>

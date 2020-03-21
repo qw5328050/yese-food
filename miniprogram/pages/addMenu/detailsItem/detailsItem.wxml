@@ -1,0 +1,16 @@
+<view class="container" wx:if="{{isShow}}">
+  <nav-active isBack="{{true}}" bind:emitOnBack="emitOnBack"></nav-active>
+  <view class="detail-title">
+    <text>标题:</text>
+    <input value="{{dataList.title}}" bindchange="meunTitleChange" style="text-align: left;" class="weui-input" placeholder=""/>
+  </view>
+  
+  <view class="detail-list">
+    <view class="detail-item" wx:for="{{dataList.list}}" wx:key="index"></view>
+    <view class="detail-item" bindtap="addDetails"> + </view>
+  </view>
+  <!-- 详情添加 -->
+  <mp-dialog show="{{isCurr}}" class="nav-dialog" buttons="{{buttons}}" bindbuttontap="dialogButton">
+    1111
+  </mp-dialog>
+</view>

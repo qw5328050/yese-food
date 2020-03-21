@@ -1,3 +1,7 @@
 /**app.wxss**/
 @import "./icon-font/iconfont.wxss";
 @import './components/weui-wxss/dist/style/weui.wxss';
+
+.ml_20 {
+  margin-bottom: 20rpm
+}

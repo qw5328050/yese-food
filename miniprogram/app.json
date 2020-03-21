@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/addMenu/addMenu",
+    "pages/detailsItem/detailsItem"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -12,7 +14,10 @@
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "usingComponents": {
-    "mp-dialog": "./components/dialog/dialog"
+    "mp-dialog": "./components/dialog/dialog",
+    "mp-cells": "./components/cells/cells",
+    "mp-cell": "./components/cell/cell",
+    "mp-form": "./components/form/form"
   },
   "permission": {
     "scope.userLocation": {

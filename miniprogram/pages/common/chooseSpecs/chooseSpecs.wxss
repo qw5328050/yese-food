@@ -1,0 +1,41 @@
+@import "../../../icon-font/iconfont.wxss";
+.choose-specs .title{
+  text-align: left;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.choose-editor input{
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  border: 1px solid #c0b3b3;
+  margin-top: 15rpx;
+  width: 94%;
+}
+.show-specs {
+  text-align: left;
+  margin-bottom: 30rpx;
+}
+.show-specs .specs-item {
+  font-size: 30rpx;
+  padding: 10rpx 30rpx;
+  margin-right:15rpx;
+  border: 1px solid #c0b3b3;
+  border-radius: 20rpx;
+  display: inline-block;
+  margin-bottom: 15rpx;
+}
+.show-specs .specs-close {
+  font-size: 20rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+.btn {
+  padding: 10rpx 30rpx;
+  background-color: #07c160;
+  color: #fff;
+  margin-top:15rpx;
+  margin-bottom:15rpx;
+  border: 1px solid #c0b3b3;
+  border-radius: 20rpx;
+}
