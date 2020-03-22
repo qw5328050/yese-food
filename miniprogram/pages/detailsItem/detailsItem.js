@@ -18,34 +18,47 @@ Page({
       isTaste: '',
       specs: [],
       taste: [],
+      id: ''
     },
     rules: []
   },
   onLoad() {
-    this.getDataList()
-    Object.assign(this.data.formData, this.data.formDefault)
-    this.setData({
-      formData: this.data.formData
+    const eventChannel = this.getOpenerEventChannel()
+    eventChannel.on('channelId', data => {
+      this.getDataList(data)
     })
   },
   // 调用更新接口
-  getDataList () {
+  getDataList (id) {
     let params = {
-      code: 'szsg'
+      id: id
     }
     wx.cloud.callFunction({
       name: 'getMenuList',
       data: params
     }).then(res => {
-      console.log(res)
       this.setData({
-        dataList: res.result.data[0]
+        dataList: res.result.data
       })
     })
   },
   // 调用更新接口
   updataDetails () {
-
+    
+  },
+  addMenuList () {
+    this.data.dataList.list.push(this.data.formData)
+    let params = {
+      id: this.data.dataList._id,
+      list: this.data.dataList.list
+    }
+    
+    wx.cloud.callFunction({
+      name: 'addMenuData',
+      data: params
+    }).then(v => {
+      console.log('add', v)
+    })
   },
   meunTitleChange(e) {
     console.log(e.detail.value)
@@ -57,11 +70,19 @@ Page({
     })
   },
   // 添加修改弹出层
+  formDataChange (e) {
+    this.data.formData[e.target.dataset.name] = e.detail.value
+    this.setData({
+      formData: this.data.formData
+    })
+  },
   dialogButton(e) {
     // confirm
     if (e.detail.index == 1) {
       console.log('确定')
-      this.updataDetails()
+      console.log(this.data.formData)
+      this.addMenuList()
+      // this.updataDetails()
     } else {
       this.setData({
         isCurr: false
@@ -69,7 +90,6 @@ Page({
     }
   },
   onModify(e) {
-    console.log(e.detail)
     this.setData({
       isCurr: true,
       formData: e.detail

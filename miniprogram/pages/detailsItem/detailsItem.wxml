@@ -18,19 +18,19 @@
       <mp-form id="dialogData" rules="{{rules}}" models="{{formData}}">
         <mp-cells>
           <mp-cell prop="name" title="菜单名称" show-error>
-              <input value="{{formData.name}}" class="weui-input" placeholder=""/>
+              <input bindchange="formDataChange" data-name="name" value="{{formData.name}}" class="weui-input" placeholder=""/>
           </mp-cell>
           <mp-cell prop="price" title="价格" show-error>
-              <input value="{{formData.price}}" class="weui-input" placeholder=""/>
+              <input bindchange="formDataChange" data-name="price" value="{{formData.price}}" class="weui-input" placeholder=""/>
           </mp-cell>
           <mp-cell prop="part" title="份量">
-              <input value="{{formData.part}}" class="weui-input" placeholder=""/>
+              <input bindchange="formDataChange" data-name="part" value="{{formData.part}}" class="weui-input" placeholder=""/>
           </mp-cell>
           <mp-cell prop="details" title="菜单简介">
-              <textarea class="textarea" value="{{formData.details}}" placeholder=""></textarea>
+              <textarea bindchange="formDataChange" data-name="details" class="textarea" value="{{formData.details}}" placeholder=""></textarea>
           </mp-cell>
           <mp-cell prop="explain" title="菜单须知">
-              <textarea class="textarea" value="{{formData.explain}}" placeholder=""></textarea>
+              <textarea bindchange="formDataChange" data-name="explain" class="textarea" value="{{formData.explain}}" placeholder=""></textarea>
           </mp-cell>
         </mp-cells>
       </mp-form>

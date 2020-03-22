@@ -94,7 +94,8 @@ Page({
     wx.navigateTo({
       url: global.url.detailsItem,
       success: function (res) {
-        res.eventChannel.emit('getDataList', event.target.dataset.details)
+        console.log(event.target.dataset.details)
+        res.eventChannel.emit('channelId', event.target.dataset.details._id)
       }
     })
   }

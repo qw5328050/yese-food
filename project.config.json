@@ -46,9 +46,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "pages/addmenu/addmenu",
-					"pathName": "pages/addmenu/addmenu",
+					"pathName": "pages/addMenu/addMenu",
 					"query": "",
 					"scene": null
 				},
